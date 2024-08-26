@@ -17,7 +17,7 @@ public class ContaPoupanca extends Conta {
 		this.aniversario = aniversario;
 	}
 	
-    @Override
+    @Override //é usada para indicar que um método está sobrescrevendo um método da superclasse
 	public void visualizar() {
 		super.visualizar();
 		System.out.println("Aniversário da conta: " + this.aniversario);
