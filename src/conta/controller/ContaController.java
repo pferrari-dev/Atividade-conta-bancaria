@@ -9,7 +9,7 @@ public class ContaController implements ContaRepository {
 	int numero = 0;
 	
 
-	@Override
+	@Override // é usada para indicar que um método está sobrescrevendo um método da superclasse
 	public void procurarPorNumero(int numero) {
 		var conta = buscarNaCollection(numero);
 		
@@ -21,7 +21,7 @@ public class ContaController implements ContaRepository {
 		
 	}
 
-	@Override
+	@Override //é usada para indicar que um método está sobrescrevendo um método da superclasse
 	public void listarTodas() {
 		for (var conta : listaContas) {
 			conta.visualizar();
@@ -30,13 +30,13 @@ public class ContaController implements ContaRepository {
 		
 	}
 
-	@Override
+	@Override //é usada para indicar que um método está sobrescrevendo um método da superclasse
 	public void cadastrar(Conta conta) {
 		listaContas.add(conta);
 		System.out.println("\n A conta número:" + conta.getNumero() + "foi criada com sucesso!");
 	}
 
-	@Override
+	@Override //é usada para indicar que um método está sobrescrevendo um método da superclasse
 	public void atualizar(Conta conta) {
 		var buscaConta = buscarNaCollection(conta.getNumero());
 		
@@ -49,7 +49,7 @@ public class ContaController implements ContaRepository {
 		
 	}
 
-	@Override
+	@Override //é usada para indicar que um método está sobrescrevendo um método da superclasse
 	public void deletar(int numero) {
 		var conta = buscarNaCollection(numero);
 		
@@ -62,7 +62,7 @@ public class ContaController implements ContaRepository {
 		
 	}
 
-	@Override
+	@Override //é usada para indicar que um método está sobrescrevendo um método da superclasse
 	public void sacar(int numero, float valor) {
 		var conta = buscarNaCollection(numero);
 		
@@ -75,7 +75,7 @@ public class ContaController implements ContaRepository {
 		
 	}
 
-	@Override
+	@Override //é usada para indicar que um método está sobrescrevendo um método da superclasse
 	public void depositar(int numero, float valor) {
 		var conta = buscarNaCollection(numero);
 		
@@ -87,7 +87,7 @@ public class ContaController implements ContaRepository {
 	
 	}
 
-	@Override
+	@Override //é usada para indicar que um método está sobrescrevendo um método da superclasse
 	public void transferir(int numeroOrigem, int numeroDestino, float valor) {
 		var contaOrigem = buscarNaCollection(numeroOrigem);
 		var contaDestino = buscarNaCollection(numeroDestino);
